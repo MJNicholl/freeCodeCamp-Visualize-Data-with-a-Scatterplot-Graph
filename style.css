@@ -1,0 +1,58 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    color: white;
+    background-color: rgb(21, 21, 21);
+}
+
+#legend {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+#red, #green {
+    position:relative;
+    padding-left: 40px;
+    width: 300px;
+    text-align: left;
+}
+
+#red::before {
+    background-color: darkred;
+    color:darkred;
+}
+
+#green::before {
+    background-color: green;
+    color:green;
+}
+
+#red::before, #green::before {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    content: "00";
+}
+
+#tooltip {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(91, 91,91);
+    text-align: center;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.dot:hover {
+    fill: grey;
+}
